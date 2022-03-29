@@ -26,11 +26,239 @@
 
 \section{Introduction}
 
-The ATP-CP system is very interesting to me. 
+The ATP-CP system is very interesting to me.
 
 \newpage
 
+\section{personal statement}
+As both a current long-distance runner as well as a former sprinter, the question of when to transition from "full-throttle" to me.
+
+\section{background}
+- how is force generated?
+- muscle fibers need to contract
+- every movement of a myosin pushing against an actin head takes one ATP
+- How is ATP, the energy currency of the body generated?
+- There are several distinct energy systems, these include energy from lipolysis, aerobic glycolysis, anaerobic glycolysis, and the creatine-phosphate system.
+- The systems that we are the most focused on for short sprints are the creatine-phosphate system as well as the anerobic system (source needed) because they are said to work during the beginning of exercise
+
+- for sprints
+- the body generally needs to accelerate from rest to a high velocity as soon as possible.
+- this makes sense, because if we were trying to escape from predators, humans would run as fast as they could.
+- there is often a lack of oxygen (saturation?) at the beginning of exercise
+
+
+- where is ATP stored so that the body is able to immediately access it?
+- (source needed)
+\section{creatine phosphate}
+- as the ATP in the body is expended extremely quickly, which, according to literature, runs out at around 1-2 seconds, there needs to be some way to replenish that energy.
+- the creatine phosphate system is a system charged up by the body beforehand, in which ATP is attached to Creatine, which then becomes the compound known as creatine phosphate (or CP) for short. When the muscles contract, taking in and using up ATP, they must be quickly recharged, and each ATP-CP compound gives up its ATP-CP
+- where the FK are the ATP-CP stored and how does it know to interact with ATP anyway?
+- this will supply energy for a good amount of time. According to literature, the designated time that the ATP-CP system will activate is around 15-20 seconds, after which the supply will run out and the body will need to recharge at rest again.
+
+- effect of training on ATP-CP system
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213384/
+- There is evidence that suggests that training could affect the buffer capacity of the ATP-CP system. Dietary supplements could also accelerate the growth of the ATP-CP system.
+
+- which body system continues on after the ATP-CP system?
+
+\section{anaerobic glycolysis system}
+- the anaerobic glycolysis is the system that takes over after ATP-CP is exhausted
+- the body has a store of glycogen (which is why athlete's eat pasta dinners), and breaks down that glycogen into glucose. Then,
+- anaerobic glycolysis is the breakdown of a glucose molecule into ATP without the presence of oxygen (as muscles are being pushed to their limits during a sprint, it is likely that they do not receive enough oxygen at max speeds)
+- glucose is broken down into two pyruvate and 2 ATP, which the pyruvate is decomposed into lactic acid (src needed)
+- this buildup of lactic acid causes an increase in H+ concentration in the cells, which causes muscle fatigue to set in, causing muscles to slowly lose the ability to contract, and describes the burning feeling that athletes get in their muscles during long distances
+- how long does the anaerobic glycolysis system last?
+
+\section{Research question}
+How does time spent sprinting affect athlete velocity?
+
+\section{Hypothesis}
+As time increases, the athlete velocity will decrease at an increasing rate, because the ATP-CP system will no longer be capable of supplying necessary energy for muscles to contract, and other energy systems will be used.
+
+    [prediction graph]
+
+\section{Variables}
+\subsection{Independent Variable}
+The independent variable will be the amount of time that the athlete sprints at full throttle down the track. It will not be directly modified by the experimentor, instead, data points of time and distance will be taken as the athlete runs down the track. The time will be measured via timestamp from the video taken of the run. The uncertainty here will effectively be 0. This is because, even though the camera records video at 24 frames per second, a picture taken of the athlete at that time will be a snapshot of the exact location of the athlete, and the speed of light will be negligible.
+
+\subsection{Dependent Variable}
+The dependent variable will be the distance that the athlete has run. This will be measured in two ways.
+
+For the first 100m, markers in the form of hurdles will be set up every 10 meters from the beginning of the starting line to the end of the 100m line. The point at which any part of the foot of the athlete has passed the hurdle in the video will be the measured distance the athlete has traversed at that time. The uncertainty here will arise from the increment of the ruler used to measure the distance every 10 meters, $\pm5\ cm$, and the uncertainty will compound the greater the distance from the starting point, for each additional 10 meter measurement. (For example, at 10 meters the uncertainty will be $\pm5\ cm$, at 20 meters the uncertainty will be $\pm10\ cm$, so on and so forth).
+
+Because for the first 100m, the track is curved in the shape of a semicircle, the distance between the observer with the camera and the athlete is constant, and as such there is no bias in perspective as the athlete traverses the track.
+
+However, for the second 100m, the track is straight, and as such the distance between the athlete and the viewer increases as the athlete runs further. This warps the camera perspective, and thus using hurdles to mark 10 meters of distance away from the athlete is no longer a viable approach.
+
+    [image here]
+
+As such, a method of interpolation will be used to map the athlete [src](https://www.tandfonline.com/doi/full/10.1080/19475683.2019.1704870)
+
+
+4 data points of the athlete will be randomly selected past 100m.
+
+4 pixels from the image will be mapped to 4 corresponding points of latitude and longitude from Google Maps of the track, and a homography matrix will be constructed.
+
+Then the pixel value of the subject's foot will be converted to a point that includes lagitude and longitude using the constructed homography matrix.
+
+Finally, the current distance of the athlete's foot will be measured via distance calculator in Google Earth.
+
+    [image here]
+
+\subsection{Controlled Variables}
+**environment** of running: participants run on the exact same portion of the track. This will ensure that factors such as the bend in the first 100m track and material of the surface of the track do not disproportionately affect one runner over the other.
+**age** of athletes: while there are many physical factors that cannot be controlled for the test subjects (such as height, genetics, etc.), all test subjects in this experiment are high school seniors, which helps eliminate the effects that the counfounding factor of age would have on the capacity of the ATP-CP system.
+the **response time** of athletes was controlled by making it so that the athletes chose when to start, with the time of their first movement being treated as the beginning of their sprint on film. The response time includes both the reaction time and movement time. For a sprint, the 0.2 seconds of reaction and time for movement could make a big different in velocity. Individuals with lower reaction times could have a higher velocity for a reason completely separate from the capacity of their energy system, and individuals who trained their movement time could also ramp up their velocity faster.
+
+\subsection{Confounding Variables}
+
+**level of fitness** was one factor that was unable to be controlled due to limited sample size. First off, the training of muscles used for sprinting could result in hypertrophy of the muscles. Bigger muscles in the legs could result in more force exerted, increasing the velocity of the athlete, however, it could also affect the rate at which energy is consumed during sprinting, potentially depleting the store of ATP-CP faster. According to literature [src], it is also possible that specific types of training could lead to increased buffer stores for the ATP-CP system, changing the point at which the velocity of the athlete starts to sharply drop off from fatigue. Fitness could also affect the weight of the athletes: athletes that are overweight or obese could require more force to move their body, depleting their energy stores faster.
+
+the **motivation** of the individual was unable to be controlled, because it is a difficult quantity to be measured. As the methodology used for sprinting is a *maximal* method of testing, where the athlete is encouraged to exert their full strength, the individual's willpower could affect the amount of effort they put in to moving their muscles, especially when the muscle fatigue from losing the energy supply from the ATP-CP system sets in place. Extrinsic factors, such as distance travelled or distance left in the track could also motivate certain athletes to "push through" certain sections.
+
+the individual **skill** of each subject was unable to be controlled, because similar to motivation, it is both hard to measure and may fluctuate. Trained sprinters may have better technique (in posture, movement of the arms, etc.), more effectively translating the energy expended in the form of ATP to force moving them forwards. An individual with higher skill may have seemingly higher ATP-CP capacity by having higher peak velocity and sustaining technique as a result.
+
+\section{Subject Selection}
+A convenience sample of 3 individuals were selected from the same high school at the senior grade level. While a convenience sample simplified and expiated the act of gathering contestants in a similar age group, it also made the confounding variables discussed above impossible to control.
+
+\section{Briefing}
+Subjects were first gathered and given the PAR-Q questionnare form to read and sign. After signing, subjects were brought to the starting line of the track and then briefed in a group according to a script [see appendix]. Any questions about technique, objective, and so on were also answered. After the experiment, subjects were thanked for their time.
+
+\section{Materials}
+- 1 camera, capable of recording videos in 1080p resolution, 24 frames per second
+- 3 PAR-Q (Physical Readiness Questionnaire) forms
+- 10 hurdles
+- 1 ruler
+
+\section{Method}
+\subsection{Gathering Data}
+1. Find starting line of track.
+2. Using the ruler, measure a straight line from the beginng of the track 1m in length, and mark the ending with an object. Repeat 9 times, until 9m of length is achieved. Place one hurdle at the end, aligning its thin side perpendicular to the side of the track. The hurdle should not be on the track: it is merely used as a marker.
+3. Repeat step 2 10 times until all 10 hurdles have been placed, equalling measurements 90m in total.
+4. Have contestants step up to the starting line of the track, and give them the debriefing.
+5. Move to the center of the track
+6. Begin filming, and signal for one contestant to start sprinting.
+7. While the contestants are sprinting, keep the camera centered on contestants, until they cross the finish line, at which point the recording may be stopped.
+8. Repeat steps 6-7 until all the contestants have finished running.
+9. Cleanup hurdles and thank contestants
+\subsection{Processing Data}
+\subsubsection{Hurdles}
+1. For each video,
+2. Determine the frame at which contestants first move from the starting track. Record this point and time as the 0m distance.
+3. From then on, find the frame in which the contestant's foot is past the hurdles. Record the time at that point in the video and the distance as the hurdle number multiplied by 9
+4. Repeat until all 10 hurdles have been passed.
+5. Record time at which the 100m line was passed, and record the time and distance as 100m
+
+\subsubsection{Interpolation}
+6. For each subject,
+7. Choose 4 video frames past 100m and before 200m which have 4 distinct points easily distinguishable from satellite image (corner of bleachers, corner of long-jump pit, etc.)
+8. Record the X and Y coordinate of each pixel. For each point, find the point corresponding on Google Earth, and record the latitude and longitude.
+9. From the four points, construct a 2d homography matrix [check appendix for code]
+10. Record the X and Y coordinate of the pixel of the athlete's foot farthest forward, and multiply it by the homography matrix to generate a latitude and longitude representing the athlete's location
+11. Use the ruler tool from Google Earth to calculate the distance from the 100m point, and record the distance travelled.
+
+\section{Raw Data Table}
+
+% [include time, distance. Uncertainty for distance should be +- 0.05 m compounding for the first 100m, then just use range / 2 for the last 100m]
+\begin{table}[H]
+    \centering
+    \caption{The effect of time \((s)\) on distance \((m)\) athlete travelled}
+    \begin{tabular}{@{}cccccc@{}} \toprule
+                         & \multicolumn{4}{c}{Time \((s)\)}                                             \\ \cmidrule(r){2-5}
+        Distance (\(m\)) & Trial 1                          & Trial 2 & Trial 3 & Average & Uncertainty \\ \midrule
+        0.0              & 0.0                              & 0.0     & 0.0     & 0.0     & 0.0         \\
+        9.0              & 2.2                              & 2.3     & 2.3     & 2.3     & 0.0         \\
+        18.0             & 3.7                              & 4.0     & 4.2     & 3.9     & 0.2         \\
+        27.0             & 5.1                              & 5.5     & 5.9     & 5.5     & 0.4         \\
+        36.0             & 6.6                              & 7.1     & 7.7     & 7.2     & 0.6         \\
+        45.0             & 8.0                              & 8.7     & 9.6     & 8.8     & 0.8         \\
+        54.0             & 9.4                              & 10.2    & 11.4    & 10.3    & 1.0         \\
+        63.0             & 10.5                             & 11.4    & 12.9    & 11.6    & 1.2         \\
+        72.0             & 11.9                             & 13.0    & 14.8    & 13.2    & 1.4         \\
+        81.0             & 13.4                             & 14.6    & 16.6    & 14.9    & 1.6         \\
+        90.0             & 14.9                             & 16.1    & 18.5    & 16.5    & 1.8         \\
+        100.0            & 16.8                             & 18.3    & 21.1    & 18.7    & 2.1         \\
+        119.8            & 19.2                             & 21.2    & 24.3    & 21.5    & 2.5         \\
+        135.6            & 20.6                             & 23.9    & 26.9    & 23.8    & 3.1         \\
+        153.5            & 24.3                             & 26.4    & 29.2    & 26.6    & 2.5         \\
+        163.6            & 26.3                             & 27.9    & 31.2    & 28.5    & 2.5         \\
+        179.7            & 28.6                             & 30.1    & 33.5    & 30.7    & 2.5         \\
+    \end{tabular}
+\end{table}
+
+\section{Sample Calculations}
+
+\begin{align*}
+    \intertext{\textbf{Average Distance Travelled}}
+    \intertext{The formula for the average time, \(T_{average}\) is given by}
+    T_{average}          & = \frac{T_{1}+T_{2}+T_{3}}{3}
+    \intertext{\textit{Example} calculation of average time given three time values for a distance of \(18\ m\)}
+                         & = \frac{3.7 + 4.0 + 4.2}{3} = 3.9
+    \intertext{\textbf{Velocity}}
+    \intertext{The formula for velocity given distance and time, \(V\) is given by}
+    \sigma_{T_{average}} & = \frac{\sigma_{T_{1}} + \sigma_{T_{2}} + \sigma_{T_{3}}}{3}
+\end{align*}
+
+\section{Calculated Data Table}
+
+
+\begin{table}[H]
+    \centering
+    % the X in tabularx expands cell to fill
+    % >{} applies command to every single cell
+    \caption{The effect of time \((s)\) on athlete velocity \((\frac{m}{s})\)}
+    \begin{tabular}{@{}ccc@{}} \toprule
+        {Time \((s)\)} & {Velocity \((\frac{m}{s})\)} & {SD} \\ \midrule
+        0.0            & 0.0                          & 0.0  \\
+        2.3            & 3.9                          & 0.0  \\
+        3.9            & 5.5                          & 0.1  \\
+        5.5            & 5.7                          & 0.3  \\
+        7.2            & 5.5                          & 0.3  \\
+        8.8            & 5.5                          & 0.5  \\
+        10.3           & 5.9                          & 0.7  \\
+        11.6           & 7.1                          & 1.0  \\
+        13.2           & 5.5                          & 0.9  \\
+        14.9           & 5.5                          & 1.0  \\
+        16.5           & 5.5                          & 1.1  \\
+        18.7           & 4.5                          & 1.0  \\
+        21.5           & 7.1                          & 0.9  \\
+        23.8           & 7.0                          & 1.4  \\
+        26.6           & 6.4                          & 0.9  \\
+        28.5           & 5.6                          & 1.4  \\
+        30.7           & 7.0                          & 1.1
+    \end{tabular}
+\end{table}
+
+% [include time and acceleration. No need to propogate uncertainty, just use standard deviation]
+
+\section{Graph}
+
+% [include, time, acceleration, with error bars being the standard deviation of each data point]
+\begin{figure}[H]
+    \centering
+    \caption{The effect of time \((s)\) on athlete velocity \((\frac{m}{s}\))}
+    \includegraphics[scale=0.3]{pics/velocity-time.png}
+\end{figure}
+
+\section{Conclusion}
+\subsection{Further Research}
+- stop contestants by time instead of by 100m
+- this will stop the confirmation bias of going faster at the end
+- this will also remove the need to ask contestants not to pace themselves, since they are not motivated by the fact that they must complete the 100m.
+- use a different method of interpolation
+- at the very least, keep the camera still
+- better yet, attach a camera to contestants' back
+
+\section{Appendix}
+\subsection{Debriefing}
+I'll be standing in the middle of the field. You'll get into the starting position at the 200m starting line (point to line) in a standing position. At this point, I'll start filming the video. I'll both verbally say "ready when you are" and raise my hand up when I'm ready for you to start. Then, whenever you feel like you're ready, run as hard as you can from the starting line to the finish line (point to the finish line).
+\subsection{Par-Q}
+[copy of PAR-Q here]
+
+[atp-cp-plan]
+
 \raggedright{}
 \printbibliography[heading=bibintoc]
+
 
 \end{document}
