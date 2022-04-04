@@ -159,7 +159,6 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
 
 \section{Raw Data Table}
 
-% [include time, distance. Uncertainty for distance should be +- 0.05 m compounding for the first 100m, then just use range / 2 for the last 100m]
 \begin{table}[H]
     \centering
     \caption{The effect of time \((s)\) on distance \((m)\) athlete travelled. (Where \(\sigma\) stands for uncertainty)}
@@ -173,10 +172,10 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
         36.0             & 6.6                              & 7.1     & 7.7     & 7.2             & 0.6            & 0.3            \\
         45.0             & 8.0                              & 8.7     & 9.6     & 8.8             & 0.8            & 0.3            \\
         54.0             & 9.4                              & 10.2    & 11.4    & 10.3            & 1.0            & 0.4            \\
-        63.0             & 10.5                             & 11.4    & 12.9    & 11.6            & 1.2            & 0.4            \\
-        72.0             & 11.9                             & 13.0    & 14.8    & 13.2            & 1.5            & 0.5            \\
-        81.0             & 13.4                             & 14.6    & 16.6    & 14.9            & 1.6            & 0.5            \\
-        90.0             & 14.9                             & 16.1    & 18.5    & 16.5            & 1.9            & 0.6            \\
+        61.0             & 10.5                             & 11.4    & 12.9    & 11.6            & 1.2            & 0.4            \\
+        70.0             & 11.9                             & 13.0    & 14.8    & 13.2            & 1.5            & 0.5            \\
+        79.0             & 13.4                             & 14.6    & 16.6    & 14.9            & 1.6            & 0.5            \\
+        88.0             & 14.9                             & 16.1    & 18.5    & 16.5            & 1.9            & 0.6            \\
         100.0            & 16.8                             & 18.3    & 21.1    & 18.7            & 2.2            & 0.6            \\
         119.8            & 19.2                             & 21.2    & 24.3    & 21.5            & 2.6            & 1.3            \\
         135.6            & 20.6                             & 23.9    & 26.9    & 23.8            & 3.1            & 5.9            \\
@@ -185,6 +184,8 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
         179.7            & 28.6                             & 30.1    & 33.5    & 30.7            & 2.5            & 5.3
     \end{tabular}
 \end{table}
+
+It was found after trials were done the hurdle from 54 to 64 meters was off by 2 meters exactly, affecting the velocity at that point and the velocity until 100 meters. The distance was normalized. While this does differ from the procedure, the data shouldn't be affected.
 
 \section{Sample Calculations}
 
@@ -200,16 +201,19 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
     \intertext{The formula for velocity given distance and time, \(V\) is given by dividing the distance travelled by the change in time}
     V           & = \frac{\Delta D}{\Delta t}
     \intertext{\textit{Example} calculation of velocity given distance and time pair \(t_1=2.3s\), \(d_1=9.0m\), \(t_2=3.9s\), \(d_2=18.0m\)}
-    \Delta D    & = d_2-d_1 = 18.0m-9.0m = 9m                   \\
-    \Delta t    & = t_2-t_1 = 3.9s-2.3s = 1.6s                  \\
+    \Delta D    & = d_2-d_1 = 18.0m-9.0m = 9m                                                                                           \\
+    \Delta t    & = t_2-t_1 = 3.9s-2.3s = 1.6s                                                                                          \\
     V           & = \frac{9m}{1.6s} = \boxed{5.5\frac{m}{s}}
     \intertext{\textbf{Propogation of uncertainty for distance over time to velocity}}
     \intertext{To get the velocity of the athlete, we subtracted two values of distance and two time values, then divided the change in distance by change as shown in the equation above. Because both the time and distance had error values, error propogation for both subtraction and division of values must be factored in, which is given by the three following formulas below}
-    \sigma_{d}&=\sigma_{d1}+\sigma_{d2}\\
-    \sigma_{t}&=\sigma_{t1}+\sigma_{t2}\\
-    \sigma_{V}&=\sqrt{\left(\frac{\sigma_{d}}{\Delta d}\right)^{2}+\left(\frac{\sigma_{t}}{\Delta t}\right)^{2}}
+    \sigma_{d}  & =\sigma_{d1}+\sigma_{d2}                                                                                              \\
+    \sigma_{t}  & =\sigma_{t1}+\sigma_{t2}                                                                                              \\
+    \sigma_{V}  & =\sqrt{\left(\frac{\sigma_{d}}{\Delta d}\right)^{2}+\left(\frac{\sigma_{t}}{\Delta t}\right)^{2}}
     \intertext{The above formula basically converts the uncertainty of distance and time as a percentage and then adds them together.}
     \intertext{\textit{Example} calculation for propogation of uncertainty of velocity given distance and time pair \(t_1=2.3s\), \(d_1=9.0m\), \(t_2=3.9s\), \(d_2=18.0m\)}
+    \sigma_{t}  & =0.057\ldots+0.23\ldots =0.29\ldots                                                                                   \\
+    \sigma_{d}  & =0.1+0.15 =  0.25                                                                                                     \\
+    \sigma_{V}  & =\sqrt{\left(\frac{0.29\ldots}{1.6\ldots}\right)^{2}+\left(\frac{0.25}{9}\right)^{2}} \approx \boxed{0.18\frac{m}{s}}
 \end{align*}
 
 \section{Calculated Data Table}
@@ -223,35 +227,43 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
     \begin{tabular}{@{}cccc@{}} \toprule
         {Time \((s)\)} & {Velocity \((\frac{m}{s})\)} & {\(\sigma_{V}\)} & {\(\sigma_{T}\)} \\ \midrule
         0.0            & 0.0                          & 0.0              & 0.0              \\
-        2.3            & 3.9                          & 0.1              & 0.0              \\
-        3.9            & 5.5                          & 0.3              & 0.2              \\
+        2.3            & 3.9                          & 0.0              & 0.0              \\
+        3.9            & 5.5                          & 0.2              & 0.2              \\
         5.5            & 5.7                          & 0.4              & 0.4              \\
-        7.2            & 5.5                          & 0.4              & 0.6              \\
-        8.8            & 5.5                          & 0.5              & 0.8              \\
-        10.3           & 5.9                          & 0.6              & 1.0              \\
-        11.6           & 7.1                          & 0.8              & 1.2              \\
-        13.2           & 5.5                          & 0.6              & 1.4              \\
-        14.9           & 5.5                          & 0.6              & 1.6              \\
-        16.5           & 5.5                          & 0.6              & 1.8              \\
-        18.7           & 4.5                          & 0.5              & 2.1              \\
-        21.5           & 7.1                          & 0.8              & 2.5              \\
-        23.8           & 7.0                          & 1.0              & 3.1              \\
-        26.6           & 6.4                          & 0.6              & 2.5              \\
-        28.5           & 5.6                          & 0.5              & 2.5              \\
-        30.7           & 7.0                          & 0.6              & 2.5
+        7.2            & 5.5                          & 0.6              & 0.6              \\
+        8.8            & 5.5                          & 0.8              & 0.8              \\
+        10.3           & 5.9                          & 1.2              & 1.0              \\
+        11.6           & 5.5                          & 1.8              & 1.2              \\
+        13.2           & 5.5                          & 1.6              & 1.4              \\
+        14.9           & 5.5                          & 1.9              & 1.6              \\
+        16.5           & 5.5                          & 2.1              & 1.8              \\
+        18.7           & 5.3                          & 1.8              & 2.1              \\
+        21.5           & 7.1                          & 1.7              & 2.5              \\
+        23.8           & 7.0                          & 2.5              & 3.1              \\
+        26.6           & 6.4                          & 2.1              & 2.5              \\
+        28.5           & 5.6                          & 2.8              & 2.5              \\
+        30.7           & 7.0                          & 2.3              & 2.5
     \end{tabular}
 \end{table}
 
-% [include time and acceleration. No need to propogate uncertainty, just use standard deviation]
 
 \section{Graph}
 
-% [include, time, acceleration, with error bars being the standard deviation of each data point]
 \begin{figure}[H]
     \centering
     \caption{The effect of time \((s)\) on athlete velocity \((\frac{m}{s}\))}
     \includegraphics[scale=0.3]{pics/velocity-time.png}
 \end{figure}
+
+
+\subsection*{Error bars on graph}
+
+The horizontal error bars on the graph represents the error in time, which was calculated using standard deviation of the time values collected for each of the three trials at that distance in time. The vertical error bars on the graph represent the error in velocity. As velocity was calculated by dividing distance by time, this error value was calculated by combining the measuring error for distance (which was calculated based off the increments of the ruler used) with the error for time. See ``Sample Calculations'' above for further details.
+
+\section{Analysis}
+
+- Velocity rose from 0 to 5 very quickly as expected, as the athlete is accelerating from rest to their full speed.
+- It levels out and decreases a little at around
 
 \section{Conclusion}
 \subsection{Further Research}
