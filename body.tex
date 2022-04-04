@@ -162,41 +162,54 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
 % [include time, distance. Uncertainty for distance should be +- 0.05 m compounding for the first 100m, then just use range / 2 for the last 100m]
 \begin{table}[H]
     \centering
-    \caption{The effect of time \((s)\) on distance \((m)\) athlete travelled}
-    \begin{tabular}{@{}cccccc@{}} \toprule
-                         & \multicolumn{4}{c}{Time \((s)\)}                                             \\ \cmidrule(r){2-5}
-        Distance (\(m\)) & Trial 1                          & Trial 2 & Trial 3 & Average & Uncertainty \\ \midrule
-        0.0              & 0.0                              & 0.0     & 0.0     & 0.0     & 0.0         \\
-        9.0              & 2.2                              & 2.3     & 2.3     & 2.3     & 0.0         \\
-        18.0             & 3.7                              & 4.0     & 4.2     & 3.9     & 0.2         \\
-        27.0             & 5.1                              & 5.5     & 5.9     & 5.5     & 0.4         \\
-        36.0             & 6.6                              & 7.1     & 7.7     & 7.2     & 0.6         \\
-        45.0             & 8.0                              & 8.7     & 9.6     & 8.8     & 0.8         \\
-        54.0             & 9.4                              & 10.2    & 11.4    & 10.3    & 1.0         \\
-        63.0             & 10.5                             & 11.4    & 12.9    & 11.6    & 1.2         \\
-        72.0             & 11.9                             & 13.0    & 14.8    & 13.2    & 1.4         \\
-        81.0             & 13.4                             & 14.6    & 16.6    & 14.9    & 1.6         \\
-        90.0             & 14.9                             & 16.1    & 18.5    & 16.5    & 1.8         \\
-        100.0            & 16.8                             & 18.3    & 21.1    & 18.7    & 2.1         \\
-        119.8            & 19.2                             & 21.2    & 24.3    & 21.5    & 2.5         \\
-        135.6            & 20.6                             & 23.9    & 26.9    & 23.8    & 3.1         \\
-        153.5            & 24.3                             & 26.4    & 29.2    & 26.6    & 2.5         \\
-        163.6            & 26.3                             & 27.9    & 31.2    & 28.5    & 2.5         \\
-        179.7            & 28.6                             & 30.1    & 33.5    & 30.7    & 2.5         \\
+    \caption{The effect of time \((s)\) on distance \((m)\) athlete travelled. (Where \(\sigma\) stands for uncertainty)}
+    \begin{tabular}{@{}ccccccc@{}} \toprule
+                         & \multicolumn{4}{c}{Time \((s)\)}                                                                         \\ \cmidrule(r){2-5}
+        Distance (\(m\)) & \(T_1\)                          & \(T_2\) & \(T_3\) & \(T_{average}\) & \(\sigma_{T}\) & \(\sigma_{D}\) \\ \midrule
+        0.0              & 0.0                              & 0.0     & 0.0     & 0.0             & 0.0            & 0.0            \\
+        9.0              & 2.2                              & 2.3     & 2.3     & 2.3             & 0.1            & 0.1            \\
+        18.0             & 3.7                              & 4.0     & 4.2     & 3.9             & 0.2            & 0.2            \\
+        27.0             & 5.1                              & 5.5     & 5.9     & 5.5             & 0.4            & 0.2            \\
+        36.0             & 6.6                              & 7.1     & 7.7     & 7.2             & 0.6            & 0.3            \\
+        45.0             & 8.0                              & 8.7     & 9.6     & 8.8             & 0.8            & 0.3            \\
+        54.0             & 9.4                              & 10.2    & 11.4    & 10.3            & 1.0            & 0.4            \\
+        63.0             & 10.5                             & 11.4    & 12.9    & 11.6            & 1.2            & 0.4            \\
+        72.0             & 11.9                             & 13.0    & 14.8    & 13.2            & 1.5            & 0.5            \\
+        81.0             & 13.4                             & 14.6    & 16.6    & 14.9            & 1.6            & 0.5            \\
+        90.0             & 14.9                             & 16.1    & 18.5    & 16.5            & 1.9            & 0.6            \\
+        100.0            & 16.8                             & 18.3    & 21.1    & 18.7            & 2.2            & 0.6            \\
+        119.8            & 19.2                             & 21.2    & 24.3    & 21.5            & 2.6            & 1.3            \\
+        135.6            & 20.6                             & 23.9    & 26.9    & 23.8            & 3.1            & 5.9            \\
+        153.5            & 24.3                             & 26.4    & 29.2    & 26.6            & 2.5            & 3.8            \\
+        163.6            & 26.3                             & 27.9    & 31.2    & 28.5            & 2.5            & 3.1            \\
+        179.7            & 28.6                             & 30.1    & 33.5    & 30.7            & 2.5            & 5.3
     \end{tabular}
 \end{table}
 
 \section{Sample Calculations}
 
 \begin{align*}
-    \intertext{\textbf{Average Distance Travelled}}
+    \intertext{\textbf{Average Time}}
     \intertext{The formula for the average time, \(T_{average}\) is given by}
-    T_{average}          & = \frac{T_{1}+T_{2}+T_{3}}{3}
+    T_{average} & = \frac{T_{1}+T_{2}+T_{3}}{3}
+    \intertext{\textbf{Uncetainty of Time \(\sigma_T\)}}
+    \intertext{The standard deviation of the time values was used to represent the uncertainty of time. This value was obtained using a calculator.}
     \intertext{\textit{Example} calculation of average time given three time values for a distance of \(18\ m\)}
-                         & = \frac{3.7 + 4.0 + 4.2}{3} = 3.9
+                & = \frac{3.7s + 4.0s + 4.2s}{3} = \boxed{3.9s}
     \intertext{\textbf{Velocity}}
-    \intertext{The formula for velocity given distance and time, \(V\) is given by}
-    \sigma_{T_{average}} & = \frac{\sigma_{T_{1}} + \sigma_{T_{2}} + \sigma_{T_{3}}}{3}
+    \intertext{The formula for velocity given distance and time, \(V\) is given by dividing the distance travelled by the change in time}
+    V           & = \frac{\Delta D}{\Delta t}
+    \intertext{\textit{Example} calculation of velocity given distance and time pair \(t_1=2.3s\), \(d_1=9.0m\), \(t_2=3.9s\), \(d_2=18.0m\)}
+    \Delta D    & = d_2-d_1 = 18.0m-9.0m = 9m                   \\
+    \Delta t    & = t_2-t_1 = 3.9s-2.3s = 1.6s                  \\
+    V           & = \frac{9m}{1.6s} = \boxed{5.5\frac{m}{s}}
+    \intertext{\textbf{Propogation of uncertainty for distance over time to velocity}}
+    \intertext{To get the velocity of the athlete, we subtracted two values of distance and two time values, then divided the change in distance by change as shown in the equation above. Because both the time and distance had error values, error propogation for both subtraction and division of values must be factored in, which is given by the three following formulas below}
+    \sigma_{d}&=\sigma_{d1}+\sigma_{d2}\\
+    \sigma_{t}&=\sigma_{t1}+\sigma_{t2}\\
+    \sigma_{V}&=\sqrt{\left(\frac{\sigma_{d}}{\Delta d}\right)^{2}+\left(\frac{\sigma_{t}}{\Delta t}\right)^{2}}
+    \intertext{The above formula basically converts the uncertainty of distance and time as a percentage and then adds them together.}
+    \intertext{\textit{Example} calculation for propogation of uncertainty of velocity given distance and time pair \(t_1=2.3s\), \(d_1=9.0m\), \(t_2=3.9s\), \(d_2=18.0m\)}
 \end{align*}
 
 \section{Calculated Data Table}
@@ -207,25 +220,25 @@ Subjects were first gathered and given the PAR-Q questionnare form to read and s
     % the X in tabularx expands cell to fill
     % >{} applies command to every single cell
     \caption{The effect of time \((s)\) on athlete velocity \((\frac{m}{s})\)}
-    \begin{tabular}{@{}ccc@{}} \toprule
-        {Time \((s)\)} & {Velocity \((\frac{m}{s})\)} & {SD} \\ \midrule
-        0.0            & 0.0                          & 0.0  \\
-        2.3            & 3.9                          & 0.0  \\
-        3.9            & 5.5                          & 0.1  \\
-        5.5            & 5.7                          & 0.3  \\
-        7.2            & 5.5                          & 0.3  \\
-        8.8            & 5.5                          & 0.5  \\
-        10.3           & 5.9                          & 0.7  \\
-        11.6           & 7.1                          & 1.0  \\
-        13.2           & 5.5                          & 0.9  \\
-        14.9           & 5.5                          & 1.0  \\
-        16.5           & 5.5                          & 1.1  \\
-        18.7           & 4.5                          & 1.0  \\
-        21.5           & 7.1                          & 0.9  \\
-        23.8           & 7.0                          & 1.4  \\
-        26.6           & 6.4                          & 0.9  \\
-        28.5           & 5.6                          & 1.4  \\
-        30.7           & 7.0                          & 1.1
+    \begin{tabular}{@{}cccc@{}} \toprule
+        {Time \((s)\)} & {Velocity \((\frac{m}{s})\)} & {\(\sigma_{V}\)} & {\(\sigma_{T}\)} \\ \midrule
+        0.0            & 0.0                          & 0.0              & 0.0              \\
+        2.3            & 3.9                          & 0.1              & 0.0              \\
+        3.9            & 5.5                          & 0.3              & 0.2              \\
+        5.5            & 5.7                          & 0.4              & 0.4              \\
+        7.2            & 5.5                          & 0.4              & 0.6              \\
+        8.8            & 5.5                          & 0.5              & 0.8              \\
+        10.3           & 5.9                          & 0.6              & 1.0              \\
+        11.6           & 7.1                          & 0.8              & 1.2              \\
+        13.2           & 5.5                          & 0.6              & 1.4              \\
+        14.9           & 5.5                          & 0.6              & 1.6              \\
+        16.5           & 5.5                          & 0.6              & 1.8              \\
+        18.7           & 4.5                          & 0.5              & 2.1              \\
+        21.5           & 7.1                          & 0.8              & 2.5              \\
+        23.8           & 7.0                          & 1.0              & 3.1              \\
+        26.6           & 6.4                          & 0.6              & 2.5              \\
+        28.5           & 5.6                          & 0.5              & 2.5              \\
+        30.7           & 7.0                          & 0.6              & 2.5
     \end{tabular}
 \end{table}
 
